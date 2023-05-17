@@ -6,7 +6,14 @@ function App() {
   return (
     <div>
       <Link to="/">
-        <Typography sx={{ color: theme.palette.common.blue }}>123</Typography>
+        <Typography variant="h1" sx={{ color: theme.palette.common.blue }}>
+          123
+        </Typography>
+        <Typography
+          sx={{ color: theme.palette.common.blue, fontFamily: 'Comic Neue', fontWeight: 700 }}
+        >
+          123
+        </Typography>
       </Link>
       <Link to="/1">1</Link>
       <Routes>

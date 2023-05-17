@@ -38,6 +38,41 @@ const theme: Theme = createTheme({
       main: '#3C3B43',
       contrastText: '#928B8B',
     },
+    text: {
+      primary: '#1C1B21',
+      secondary: '#928B8B',
+    },
+  },
+
+  typography: {
+    fontFamily: 'Comic Neue, sans-serif',
+
+    h1: {
+      fontSize: '5rem',
+      fontFamily: 'Delicious Handrawn, sans-serif',
+      fontWeight: 400,
+      lineHeight: 1.2,
+    },
+
+    h3: {
+      fontSize: '2rem',
+      fontWeight: 400,
+    },
+
+    body1: {
+      fontSize: '2rem',
+    },
+
+    body2: {
+      fontSize: '1.25rem',
+    },
+
+    button: {
+      fontSize: '1.25rem',
+      fontWeight: 400,
+      lineHeight: 1,
+      textTransform: 'none',
+    },
   },
 })
 
