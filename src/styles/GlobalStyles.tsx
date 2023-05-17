@@ -12,7 +12,7 @@ export const GlobalStyles = () => (
       body {
         line-height: 1;
         font-size: 1rem;
-        color: ${theme.palette.text.primary};
+        // color: ${theme.palette.text.primary};
         font-weight: 400;
         overflow-x: hidden;
       }
