@@ -4,22 +4,33 @@ import { css } from '@mui/material/styles'
 export const Root = styled(Box)`
   height: 100vh;
   padding-top: 8.375rem;
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+  padding-left: 4rem;
 `
 
 export const WelcomeContainer = styled(Box)`
   height: 100%;
   display: flex;
-  align-items: center;
+  //align-items: center;
+  flex-direction: column;
   justify-content: center;
+  transform: translateX(7rem);
+  position: relative;
+  z-index: 1;
 `
 
 export const Name = styled(props => <Typography variant="h1" {...props} />)`
   display: flex;
   flex-direction: column;
   width: fit-content;
-  transform: translateX(8rem);
-  position: relative;
-  z-index: 1;
+`
+
+export const NameLine = styled(props => (
+  <Typography component="span" variant="inherit" {...props} />
+))`
+  white-space: nowrap;
 `
 
 export const WhiteLetters = styled(props => (
@@ -33,6 +44,13 @@ export const WhiteLetters = styled(props => (
     -webkit-text-stroke-color: ${theme.palette.text.primary};
   `,
 )
+
+export const ButtonContainer = styled(Box)`
+  max-width: 14.125rem;
+  width: 100%;
+  margin-top: 1.875rem;
+  margin-left: 15%;
+`
 
 export const PhotoContainer = styled(Box)`
   position: relative;
