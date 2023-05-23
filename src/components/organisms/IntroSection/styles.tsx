@@ -6,8 +6,6 @@ export const Root = styled(Box)`
   padding-top: 8.375rem;
   display: flex;
   align-items: center;
-  //justify-content: center;
-  padding-left: 4rem;
 `
 
 export const WelcomeContainer = styled(Box)`

@@ -23,7 +23,7 @@ export const HighlightedText = styled(
     & ${Highlighter} {
       ${isViewed &&
       css`
-        animation: ${HighlightAnimation} 1s linear 1s 1 normal forwards;
+        animation: ${HighlightAnimation} 1s linear 0.5s 1 normal forwards;
       `}
     }
   `,
@@ -37,6 +37,7 @@ export const Highlighter = styled(SvgIcon)`
   height: 2.5rem;
   transform: translateY(-50%);
   mix-blend-mode: multiply;
+  pointer-events: none;
 `
 
 const HighlightAnimation = keyframes`
