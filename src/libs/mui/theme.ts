@@ -31,6 +31,7 @@ const theme: Theme = createTheme({
     },
     primary: {
       main: '#FFFACA',
+      dark: '#FFF6A9',
       contrastText: '#1C1B21',
     },
     secondary: {

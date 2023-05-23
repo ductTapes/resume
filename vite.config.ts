@@ -17,6 +17,7 @@ export default defineConfig({
   resolve: {
     alias: {
       src: path.resolve('src/'),
+      '@mui/styled-engine': '@mui/styled-engine-sc',
     },
   },
 })

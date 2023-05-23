@@ -1,5 +1,6 @@
 import { styled } from '@mui/material'
 import LinkComponent from 'src/components/atoms/Link/Link'
+import { css } from '@mui/material/styles'
 
 export const Root = styled('header')`
   height: 4.875rem;
@@ -11,6 +12,7 @@ export const Root = styled('header')`
   top: 3.5rem;
   left: 0;
   width: 100%;
+  z-index: 10;
 `
 
 export const Nav = styled('nav')`
@@ -22,6 +24,16 @@ export const Nav = styled('nav')`
   width: 100%;
 `
 
-export const Link = styled(LinkComponent)`
-  font-size: 1.375rem;
-`
+export const Link = styled(LinkComponent)(
+  ({ theme }) => css`
+    font-size: 1.375rem;
+
+    &:hover {
+      color: ${theme.palette.primary.dark};
+      -webkit-text-fill-color: ${theme.palette.primary
+        .dark}; /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: ${theme.palette.text.primary};
+    }
+  `,
+)
