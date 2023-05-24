@@ -39,7 +39,7 @@ export const IconContainer = styled(Box)`
   }
 `
 
-export const Title = styled<TypographyProps>(Typography)`
+export const Title = styled(Typography)`
   text-align: center;
   margin-top: 2.5rem;
 `
@@ -61,6 +61,8 @@ export const Description = styled(Typography)(
   `,
 )
 
-export const Bold = styled(props => <Typography component="span" variant="inherit" {...props} />)`
+export const Bold = styled((props: TypographyProps) => (
+  <Typography component="span" variant="inherit" {...props} />
+))`
   font-weight: 700;
-`
+` as typeof Typography

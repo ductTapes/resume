@@ -1,4 +1,4 @@
-import { Box, styled, Typography } from '@mui/material'
+import { Box, styled, Typography, TypographyProps } from '@mui/material'
 import { css } from '@mui/material/styles'
 
 export const Root = styled(Box)`
@@ -19,19 +19,19 @@ export const WelcomeContainer = styled(Box)`
   z-index: 1;
 `
 
-export const Name = styled(props => <Typography variant="h1" {...props} />)`
+export const Name = styled((props: TypographyProps) => <Typography variant="h1" {...props} />)`
   display: flex;
   flex-direction: column;
   width: fit-content;
 `
 
-export const NameLine = styled(props => (
+export const NameLine = styled((props: TypographyProps) => (
   <Typography component="span" variant="inherit" {...props} />
 ))`
   white-space: nowrap;
 `
 
-export const WhiteLetters = styled(props => (
+export const WhiteLetters = styled((props: TypographyProps) => (
   <Typography component="span" variant="inherit" {...props} />
 ))(
   ({ theme }) => css`
@@ -55,7 +55,7 @@ export const PhotoContainer = styled(Box)`
 `
 
 export const Img = styled('img', {
-  shouldForwardProp: prop => prop !== 'absolute',
+  shouldForwardProp: (prop: string) => prop !== 'absolute',
 })<{ absolute?: boolean }>(
   ({ absolute }) => css`
     ${absolute &&

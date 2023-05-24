@@ -9,11 +9,11 @@ export const Root = styled(Box)`
 `
 
 export const HighlightedText = styled(
-  forwardRef((props, ref) => (
+  forwardRef<HTMLSpanElement>((props, ref) => (
     <Typography component="span" variant="inherit" {...props} ref={ref} />
   )),
   {
-    shouldForwardProp: prop => prop !== 'isViewed',
+    shouldForwardProp: (prop: string) => prop !== 'isViewed',
   },
 )<{ isViewed: boolean }>(
   ({ isViewed }) => css`

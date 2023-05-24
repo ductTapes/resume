@@ -24,10 +24,12 @@
     "baseUrl": "./",
 
     "paths": {
-      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]}
+      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+    },
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "declarations"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+
 }
 
 

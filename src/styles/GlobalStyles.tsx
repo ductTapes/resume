@@ -1,9 +1,10 @@
 import { GlobalStyles as MUIGlobalStyles } from '@mui/material'
 import { css } from '@mui/material/styles'
+import { Theme } from '@mui/system'
 
 export const GlobalStyles = () => (
   <MUIGlobalStyles
-    styles={theme => css`
+    styles={(theme: Theme) => css`
       html {
         font-size: 16px;
         font-family: Comic Neue, sans-serif;
