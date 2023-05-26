@@ -5,17 +5,17 @@ const Footer = () => {
     <S.Root>
       <S.Block>
         <S.BlockTitle $color="blue">Don’t be shy, say hallo!</S.BlockTitle>
-        <S.BlockValue>grishchenko-yuriy1996@yandex.by</S.BlockValue>
+        <S.BlockLink to="/">grishchenko-yuriy1996@yandex.by</S.BlockLink>
       </S.Block>
 
       <S.Block>
         <S.BlockTitle $color="green">See more work</S.BlockTitle>
-        <S.BlockValue>Github</S.BlockValue>
+        <S.BlockLink to="/">Github</S.BlockLink>
       </S.Block>
 
       <S.Block>
         <S.BlockTitle $color="purple">Let’s connection</S.BlockTitle>
-        <S.BlockValue>Linkedin</S.BlockValue>
+        <S.BlockLink to="/">Linkedin</S.BlockLink>
       </S.Block>
     </S.Root>
   )

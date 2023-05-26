@@ -1,6 +1,7 @@
 import { Box, BoxProps, styled, Typography } from '@mui/material'
 import { css } from '@mui/material/styles'
 import { Theme } from '@mui/material/styles/createTheme'
+import Link from 'src/components/atoms/Link'
 
 export const Root = styled(props => <Box component="footer" {...props} />)<BoxProps>`
   background-image: url('/images/grid.png');
@@ -32,11 +33,13 @@ export const BlockTitle = styled(Typography)<{ $color: keyof Theme['palette']['c
   `,
 )
 
-export const BlockValue = styled(Typography)(
+export const BlockLink = styled(Link)(
   ({ theme }) => css`
     background-color: ${theme.palette.secondary.light};
     padding: 1.5rem;
     flex-grow: 1;
     font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.5;
   `,
 )
