@@ -1,5 +1,5 @@
 import { styled } from '@mui/material'
-import LinkComponent from 'src/components/atoms/Link/Link'
+import LinkComponent from 'src/components/atoms/Link'
 import { css } from '@mui/material/styles'
 
 export const Root = styled('header')`

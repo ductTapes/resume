@@ -1,5 +1,5 @@
-import { Box, keyframes, Typography, styled } from '@mui/material'
-import { SvgIcon } from 'src/components/atoms/SvgIcon/SvgIcon'
+import { Box, keyframes, Typography, styled, TypographyProps } from '@mui/material'
+import SvgIcon from 'src/components/atoms/SvgIcon'
 import { css } from '@mui/material/styles'
 import { forwardRef } from 'react'
 
@@ -15,7 +15,7 @@ export const HighlightedText = styled(
   {
     shouldForwardProp: (prop: string) => prop !== 'isViewed',
   },
-)<{ isViewed: boolean }>(
+)<TypographyProps & { isViewed: boolean }>(
   ({ isViewed }) => css`
     position: relative;
     white-space: nowrap;

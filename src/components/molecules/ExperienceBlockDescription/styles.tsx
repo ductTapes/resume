@@ -1,6 +1,6 @@
 import { Box, BoxProps, styled, Typography, TypographyProps } from '@mui/material'
 import { css } from '@mui/material/styles'
-import Link from 'src/components/atoms/Link/Link'
+import Link from 'src/components/atoms/Link'
 
 export const Root = styled(Box)`
   font-size: 1.25rem;

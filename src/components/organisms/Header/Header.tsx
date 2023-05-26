@@ -1,8 +1,8 @@
-import * as S from './styles'
-import { SvgIcon } from 'src/components/atoms/SvgIcon/SvgIcon'
-import { LogoIcon } from 'src/components/atoms/svg/index'
+import SvgIcon from 'src/components/atoms/SvgIcon'
+import { LogoIcon } from 'src/components/atoms/svg'
 import { Box } from '@mui/material'
-import Link from 'src/components/atoms/Link/Link'
+import Link from 'src/components/atoms/Link'
+import * as S from './styles'
 
 const Header = () => {
   return (

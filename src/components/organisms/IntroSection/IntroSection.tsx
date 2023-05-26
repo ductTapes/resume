@@ -1,6 +1,6 @@
-import Button from 'src/components/atoms/Button/Button'
+import Button from 'src/components/atoms/Button'
 import * as S from './styles'
-import Container from 'src/components/atoms/Container/Container'
+import Container from 'src/components/atoms/Container'
 
 const IntroSection = () => {
   return (
@@ -8,10 +8,10 @@ const IntroSection = () => {
       <S.Root>
         <S.WelcomeContainer>
           <S.Name>
-            <S.NameLine component="span" variant="inherit">
+            <S.NameLine variant="inherit">
               I’m Grishchenko <S.WhiteLetters>Yura</S.WhiteLetters>
             </S.NameLine>
-            <S.NameLine component="span" variant="inherit">
+            <S.NameLine variant="inherit">
               Full-stack deve<S.WhiteLetters>loper</S.WhiteLetters>
             </S.NameLine>
           </S.Name>

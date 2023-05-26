@@ -1,7 +1,8 @@
-import { Box, styled, Typography } from '@mui/material'
+import { Box, BoxProps, styled, Typography } from '@mui/material'
 import { css } from '@mui/material/styles'
+import { Theme } from '@mui/material/styles/createTheme'
 
-export const Root = styled(props => <Box component="footer" {...props} />)`
+export const Root = styled(props => <Box component="footer" {...props} />)<BoxProps>`
   background-image: url('/images/grid.png');
   padding: 9rem 0 15rem;
 `
@@ -18,10 +19,10 @@ export const Block = styled(Box)(
   `,
 )
 
-export const BlockTitle = styled(Typography)(
-  ({ theme, color }) => css`
+export const BlockTitle = styled(Typography)<{ $color: keyof Theme['palette']['common'] }>(
+  ({ theme, $color }) => css`
     padding: 1.5rem;
-    background-color: ${theme.palette.common[color]};
+    background-color: ${theme.palette.common[$color]};
     //flex-grow: 1;
     width: 45%;
     text-align: right;

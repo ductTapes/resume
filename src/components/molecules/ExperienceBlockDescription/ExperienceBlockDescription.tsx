@@ -1,7 +1,7 @@
 import * as S from './styles'
 import { Box } from '@mui/material'
-import { SvgIcon } from 'src/components/atoms/SvgIcon/SvgIcon'
-import { DiagonalArrowIcon } from 'src/components/atoms/svg/index'
+import SvgIcon from 'src/components/atoms/SvgIcon'
+import { DiagonalArrowIcon } from 'src/components/atoms/svg'
 import React from 'react'
 import { ExperienceBlockDescriptionProps } from 'src/components/molecules/ExperienceBlockDescription/types'
 

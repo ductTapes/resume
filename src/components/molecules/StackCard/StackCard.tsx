@@ -1,8 +1,8 @@
 import * as S from './styles'
 import React, { useState } from 'react'
 import { GetStackCardByType, StackCardProps } from 'src/components/molecules/StackCard/types'
-import { GitIcon, NodeJSIcon, ReactIcon } from 'src/components/atoms/svg/index'
-import { SvgIcon } from 'src/components/atoms/SvgIcon/SvgIcon'
+import { GitIcon, NodeJSIcon, ReactIcon } from 'src/components/atoms/svg'
+import SvgIcon from 'src/components/atoms/SvgIcon'
 
 const getStackCardByType: GetStackCardByType = type => {
   switch (type) {

@@ -1,6 +1,6 @@
 import * as S from './styles'
-import StackCard from 'src/components/molecules/StackCard/StackCard'
-import Container from 'src/components/atoms/Container/Container'
+import StackCard from 'src/components/molecules/StackCard'
+import Container from 'src/components/atoms/Container'
 
 const StackSection = () => {
   return (

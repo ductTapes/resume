@@ -1,12 +1,12 @@
 import * as S from './styles'
 import { Typography } from '@mui/material'
-import { HighlighterIcon } from 'src/components/atoms/svg/index'
+import { HighlighterIcon } from 'src/components/atoms/svg'
 import { useRef } from 'react'
 import useIsInViewport from 'src/hooks/useIsInViewport'
-import Container from 'src/components/atoms/Container/Container'
+import Container from 'src/components/atoms/Container'
 
 const AboutMeSection = () => {
-  const highlightedTextRef = useRef<Element | null>(null)
+  const highlightedTextRef = useRef<HTMLSpanElement>(null)
   const isInViewport = useIsInViewport(highlightedTextRef)
 
   return (
