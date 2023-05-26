@@ -1,7 +1,7 @@
 import { Box, styled, Typography, TypographyProps } from '@mui/material'
 import { css } from '@mui/material/styles'
 
-export const Root = styled(Box)(
+export const Root = styled(Box)<{ showMore: boolean }>(
   ({ theme, showMore }) => css`
     cursor: pointer;
     background-color: ${theme.palette.secondary.light};
