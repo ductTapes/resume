@@ -6,16 +6,19 @@ import ThemeProvider from 'src/libs/mui/ThemeProvider'
 import FontStyles from 'src/styles/FontStyles'
 import ResetStyles from 'src/styles/ResetStyles'
 import GlobalStyles from 'src/styles/GlobalStyles'
+import { HeaderProvider } from 'src/components/organisms/Header/HeaderContextProvider'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        <FontStyles />
-        <ResetStyles />
-        <GlobalStyles />
+        <HeaderProvider>
+          <FontStyles />
+          <ResetStyles />
+          <GlobalStyles />
 
-        <App />
+          <App />
+        </HeaderProvider>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,

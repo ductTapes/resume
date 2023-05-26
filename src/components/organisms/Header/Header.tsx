@@ -2,10 +2,13 @@ import SvgIcon from 'src/components/atoms/SvgIcon'
 import { LogoIcon } from 'src/components/atoms/svg'
 import Link from 'src/components/atoms/Link'
 import * as S from './styles'
+import { useHeaderContext } from 'src/components/organisms/Header/HeaderContextProvider'
 
 const Header = () => {
+  const [{ isDarkMode }] = useHeaderContext()
+
   return (
-    <S.Root>
+    <S.Root isDarkMode={isDarkMode}>
       <S.LogoContainer>
         <Link to="/">
           <SvgIcon component={LogoIcon} />

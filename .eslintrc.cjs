@@ -14,6 +14,7 @@ module.exports = {
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-unused-vars": ["error"],
     "no-constant-condition": ["error", { "checkLoops": false }],
+    "@typescript-eslint/no-empty-function": 'off'
 
   },
 }
