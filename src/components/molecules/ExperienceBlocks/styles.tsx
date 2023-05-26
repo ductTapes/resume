@@ -30,7 +30,7 @@ export const LabelIconContainer = styled(Box)`
   top: 0.2rem;
   left: 3rem;
   transform-origin: top left;
-  animation: 0.3s ease-in-out 0s infinite alternate ${LabelKeyframes};
+  animation: 0.5s ease-in-out 0s infinite alternate ${LabelKeyframes};
 `
 
 export const ImageContainer = styled(Box)`

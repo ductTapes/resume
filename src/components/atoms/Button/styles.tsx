@@ -12,10 +12,11 @@ export const Button = styled(MUIButton)<ButtonProps>(
 
     &.MuiButton-containedPrimary {
       border: 1px solid ${theme.palette.common.black};
+      background-color: ${theme.palette.common.white};
 
       &:hover,
       &:active {
-        background-color: ${theme.palette.common.white};
+        background-color: ${theme.palette.primary.main};
       }
     }
   `,

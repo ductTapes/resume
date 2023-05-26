@@ -1,17 +1,16 @@
 import SvgIcon from 'src/components/atoms/SvgIcon'
 import { LogoIcon } from 'src/components/atoms/svg'
-import { Box } from '@mui/material'
 import Link from 'src/components/atoms/Link'
 import * as S from './styles'
 
 const Header = () => {
   return (
     <S.Root>
-      <Box>
+      <S.LogoContainer>
         <Link to="/">
           <SvgIcon component={LogoIcon} />
         </Link>
-      </Box>
+      </S.LogoContainer>
 
       <S.Nav>
         <S.Link to="/">About</S.Link>

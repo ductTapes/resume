@@ -1,9 +1,9 @@
-import { Box, styled, Typography, TypographyProps } from '@mui/material'
+import { Box, keyframes, styled, Typography, TypographyProps } from '@mui/material'
 import { css } from '@mui/material/styles'
 
 export const Root = styled(Box)`
   height: 100vh;
-  padding-top: 8.375rem;
+  padding-top: 6.375rem;
   display: flex;
   align-items: center;
 `
@@ -27,9 +27,39 @@ export const Name = styled((props: TypographyProps) => <Typography variant="h1" 
 
 export const NameLine = styled((props: TypographyProps) => (
   <Typography component="span" variant="inherit" {...props} />
-))`
-  white-space: nowrap;
-`
+))<{ delay?: number }>(
+  ({ theme, delay = 0.5 }) => css`
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: ${theme.palette.primary.dark};
+      animation: ${HighlightNameKeyframes} 1.3s linear ${delay}s 1 normal forwards;
+      transform: translateX(-100%);
+      z-index: 1;
+    }
+
+    ${NameText} {
+      animation: ${OpacityKeyframes} 1.3s linear ${delay}s 1 normal forwards;
+    }
+  `,
+)
+
+export const NameText = styled((props: TypographyProps) => (
+  <Typography component="span" variant="inherit" {...props} />
+))(
+  () => css`
+    white-space: nowrap;
+    opacity: 0;
+  `,
+)
 
 export const WhiteLetters = styled((props: TypographyProps) => (
   <Typography component="span" variant="inherit" {...props} />
@@ -67,3 +97,32 @@ export const Img = styled('img', {
     `}
   `,
 )
+
+const HighlightNameKeyframes = keyframes`
+  0% {
+   transform: translateX(-100%);
+  }
+  
+  100% {
+    transform: translateX(100%);
+  }
+`
+
+const OpacityKeyframes = keyframes`
+  0% {
+    opacity: 0;
+  }
+  
+  49% {
+    opacity: 0;
+
+  }
+  
+  50% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+`

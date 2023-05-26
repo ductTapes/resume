@@ -9,10 +9,14 @@ const IntroSection = () => {
         <S.WelcomeContainer>
           <S.Name>
             <S.NameLine variant="inherit">
-              I’m Grishchenko <S.WhiteLetters>Yura</S.WhiteLetters>
+              <S.NameText>
+                I’m Grishchenko <S.WhiteLetters>Yura</S.WhiteLetters>
+              </S.NameText>
             </S.NameLine>
-            <S.NameLine variant="inherit">
-              Full-stack deve<S.WhiteLetters>loper</S.WhiteLetters>
+            <S.NameLine delay={0.75} variant="inherit">
+              <S.NameText>
+                Full-stack deve<S.WhiteLetters>loper</S.WhiteLetters>
+              </S.NameText>
             </S.NameLine>
           </S.Name>
 

@@ -1,4 +1,4 @@
-import { styled } from '@mui/material'
+import { Box, styled } from '@mui/material'
 import LinkComponent from 'src/components/atoms/Link'
 import { css } from '@mui/material/styles'
 
@@ -9,10 +9,18 @@ export const Root = styled('header')`
   justify-content: space-between;
   padding: 0 4.375rem;
   position: fixed;
-  top: 3.5rem;
+  top: 2rem;
   left: 0;
   width: 100%;
   z-index: 10;
+`
+
+export const LogoContainer = styled(Box)`
+  transition: transform 0.3s linear;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
 `
 
 export const Nav = styled('nav')`
