@@ -1,7 +1,8 @@
 import { Box, keyframes, styled } from '@mui/material'
 import { css } from '@mui/material/styles'
+import ScaleOnScroll from 'src/components/atoms/ScaleOnScroll'
 
-export const Root = styled(Box)(
+export const Root = styled(ScaleOnScroll)(
   ({ theme }) => css`
     width: 100%;
     background-color: ${theme.palette.secondary.main};
