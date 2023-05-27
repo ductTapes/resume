@@ -39,7 +39,7 @@ export const BlockchainProjectBlock = () => {
             zIndex: 0,
             left: '-20%',
             top: '-20%',
-            color: alpha(theme.palette.common.green, 0.3),
+            color: alpha(theme.palette.common.purple, 0.3),
           }}
         >
           {`
@@ -58,7 +58,7 @@ export const BlockchainProjectBlock = () => {
             zIndex: 0,
             left: '-25%',
             top: '50%',
-            color: alpha(theme.palette.common.green, 0.3),
+            color: alpha(theme.palette.common.purple, 0.3),
           }}
         >
           {`

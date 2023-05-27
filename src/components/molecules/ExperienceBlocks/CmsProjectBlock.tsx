@@ -35,7 +35,7 @@ export const CmsProjectBlock = () => {
             zIndex: 0,
             left: '-4rem',
             top: '-3rem',
-            color: alpha(theme.palette.common.green, 0.3),
+            color: alpha(theme.palette.common.blue, 0.3),
           }}
         >
           {`if (element.count <= element_array.length) {
@@ -51,7 +51,7 @@ export const CmsProjectBlock = () => {
             zIndex: 0,
             right: '-5rem',
             bottom: '-6rem',
-            color: alpha(theme.palette.common.green, 0.3),
+            color: alpha(theme.palette.common.blue, 0.3),
           }}
         >
           {`.SobreMi {
