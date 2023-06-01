@@ -22,26 +22,26 @@ export const Root = styled('header', {
     css`
       ${LogoContainer} {
         animation: ${ShowKeyframes} 1s linear 1 normal forwards;
-        animation-delay: 0.4s;
+        animation-delay: 0.1s;
       }
 
       ${Link} {
         animation: ${ShowKeyframes} 1s linear 1 normal forwards;
 
         &:nth-of-type(1) {
-          animation-delay: 0.6s;
+          animation-delay: 0.2s;
         }
 
         &:nth-of-type(2) {
-          animation-delay: 0.7s;
+          animation-delay: 0.3s;
         }
 
         &:nth-of-type(3) {
-          animation-delay: 0.8s;
+          animation-delay: 0.4s;
         }
 
         &:nth-of-type(4) {
-          animation-delay: 0.9s;
+          animation-delay: 0.5s;
         }
       }
     `}
@@ -60,7 +60,6 @@ export const Root = styled('header', {
 
       ${Link} {
         color: ${theme.palette.common.white};
-        //transition-delay: 0s;
       }
     `}
   `,

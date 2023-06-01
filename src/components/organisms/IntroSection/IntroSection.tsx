@@ -11,12 +11,12 @@ const IntroSection = () => {
       <S.Root showAnimation={isFinishedAppLoadAnimation}>
         <S.WelcomeContainer>
           <S.Name>
-            <S.NameLine delay={1.5} showAnimation={isFinishedAppLoadAnimation} variant="inherit">
+            <S.NameLine delay={0.7} showAnimation={isFinishedAppLoadAnimation} variant="inherit">
               <S.NameText>
                 I’m Grishchenko <S.WhiteLetters>Yura</S.WhiteLetters>
               </S.NameText>
             </S.NameLine>
-            <S.NameLine showAnimation={isFinishedAppLoadAnimation} delay={1.75} variant="inherit">
+            <S.NameLine showAnimation={isFinishedAppLoadAnimation} delay={0.95} variant="inherit">
               <S.NameText>
                 Full-stack deve<S.WhiteLetters>loper</S.WhiteLetters>
               </S.NameText>

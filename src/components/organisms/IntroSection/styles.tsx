@@ -11,7 +11,7 @@ export const Root = styled(Box, {
     display: flex;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.5s linear 1s;
+    transition: opacity 0.5s linear 0.6s;
 
     ${showAnimation &&
     css`

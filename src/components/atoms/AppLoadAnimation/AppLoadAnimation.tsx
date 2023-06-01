@@ -2,7 +2,7 @@ import * as S from './styles'
 import React, { useEffect, useState } from 'react'
 import { useAppLoadAnimationContext } from 'src/components/atoms/AppLoadAnimation/AppLoadAnimationContextProvider'
 
-const DURATION = 1.25
+const DURATION = 0.8
 const DELAY = 0.5
 
 const AppLoadAnimation: React.FC = () => {
