@@ -2,6 +2,7 @@ import { Box, keyframes, Typography, styled, TypographyProps } from '@mui/materi
 import SvgIcon from 'src/components/atoms/SvgIcon'
 import { css } from '@mui/material/styles'
 import { forwardRef } from 'react'
+import shouldForwardProp from '../../../helpers/shouldForwardProp'
 
 export const Root = styled(Box)`
   background-image: url('/images/grid.png');
@@ -13,7 +14,7 @@ export const HighlightedText = styled(
     <Typography component="span" variant="inherit" {...props} ref={ref} />
   )),
   {
-    shouldForwardProp: (prop: string) => prop !== 'isViewed',
+    shouldForwardProp: shouldForwardProp('isViewed'),
   },
 )<TypographyProps & { isViewed: boolean }>(
   ({ isViewed }) => css`

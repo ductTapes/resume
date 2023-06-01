@@ -1,7 +1,10 @@
 import { Box, keyframes, styled, Typography, TypographyProps } from '@mui/material'
 import { css } from '@mui/material/styles'
+import shouldForwardProp from '../../../helpers/shouldForwardProp'
 
-export const Root = styled(Box)<{ showAnimation: boolean }>(
+export const Root = styled(Box, {
+  shouldForwardProp: shouldForwardProp('showAnimation'),
+})<{ showAnimation: boolean }>(
   ({ showAnimation }) => css`
     height: 100vh;
     padding-top: 6.375rem;
@@ -34,9 +37,12 @@ export const Name = styled((props: TypographyProps) => <Typography variant="h1" 
   width: fit-content;
 `
 
-export const NameLine = styled((props: TypographyProps) => (
-  <Typography component="span" variant="inherit" {...props} />
-))<{ delay?: number; showAnimation: boolean }>(
+export const NameLine = styled(
+  (props: TypographyProps) => <Typography component="span" variant="inherit" {...props} />,
+  {
+    shouldForwardProp: shouldForwardProp('showAnimation', 'delay'),
+  },
+)<{ delay?: number; showAnimation: boolean }>(
   ({ theme, delay = 0.75, showAnimation }) => css`
     position: relative;
     overflow: hidden;
@@ -101,7 +107,7 @@ export const PhotoContainer = styled(Box)`
 `
 
 export const Img = styled('img', {
-  shouldForwardProp: (prop: string) => prop !== 'absolute',
+  shouldForwardProp: shouldForwardProp('absolute'),
 })<{ absolute?: boolean }>(
   ({ absolute }) => css`
     ${absolute &&

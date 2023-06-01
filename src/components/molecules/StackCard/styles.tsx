@@ -1,7 +1,10 @@
 import { Box, styled, Typography, TypographyProps } from '@mui/material'
 import { css } from '@mui/material/styles'
+import shouldForwardProp from '../../../helpers/shouldForwardProp'
 
-export const Root = styled(Box)<{ showMore: boolean }>(
+export const Root = styled(Box, { shouldForwardProp: shouldForwardProp('showMore') })<{
+  showMore: boolean
+}>(
   ({ theme, showMore }) => css`
     cursor: pointer;
     background-color: ${theme.palette.secondary.light};

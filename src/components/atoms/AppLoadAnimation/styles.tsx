@@ -1,7 +1,10 @@
 import { Box, keyframes, styled } from '@mui/material'
 import { css } from '@mui/material/styles'
+import shouldForwardProp from '../../../helpers/shouldForwardProp'
 
-export const Root = styled(Box)<{
+export const Root = styled(Box, {
+  shouldForwardProp: shouldForwardProp('duration', 'delay', 'start'),
+})<{
   duration: number
   delay: number
   start: boolean

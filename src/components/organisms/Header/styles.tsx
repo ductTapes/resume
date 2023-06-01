@@ -1,9 +1,10 @@
 import { Box, keyframes, styled } from '@mui/material'
 import LinkComponent from 'src/components/atoms/Link'
 import { css } from '@mui/material/styles'
+import shouldForwardProp from '../../../helpers/shouldForwardProp'
 
 export const Root = styled('header', {
-  shouldForwardProp: (prop: string) => !['isDarkMode', 'isFinishedAppLoadAnimation'].includes(prop),
+  shouldForwardProp: shouldForwardProp('isDarkMode', 'isFinishedAppLoadAnimation'),
 })<{ isDarkMode: boolean; isFinishedAppLoadAnimation: boolean }>(
   ({ theme, isDarkMode, isFinishedAppLoadAnimation }) => css`
     height: 4.875rem;
@@ -27,19 +28,19 @@ export const Root = styled('header', {
       ${Link} {
         animation: ${ShowKeyframes} 1s linear 1 normal forwards;
 
-        &:nth-child(1) {
+        &:nth-of-type(1) {
           animation-delay: 0.6s;
         }
 
-        &:nth-child(2) {
+        &:nth-of-type(2) {
           animation-delay: 0.7s;
         }
 
-        &:nth-child(3) {
+        &:nth-of-type(3) {
           animation-delay: 0.8s;
         }
 
-        &:nth-child(4) {
+        &:nth-of-type(4) {
           animation-delay: 0.9s;
         }
       }

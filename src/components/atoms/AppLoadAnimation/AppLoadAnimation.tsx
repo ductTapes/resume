@@ -7,7 +7,7 @@ const DELAY = 0.5
 
 const AppLoadAnimation: React.FC = () => {
   const [wasStarted, setWasStarted] = useState(false)
-  const [{ isFinished }, { setIsFinished }] = useAppLoadAnimationContext()
+  const [, { setIsFinished }] = useAppLoadAnimationContext()
 
   useEffect(() => {
     setWasStarted(true)
@@ -17,7 +17,7 @@ const AppLoadAnimation: React.FC = () => {
     }, (DURATION + DELAY) * 1000)
   }, [])
 
-  return <S.Root delay={DELAY} duration={DURATION} isFinished={isFinished} start={wasStarted} />
+  return <S.Root delay={DELAY} duration={DURATION} start={wasStarted} />
 }
 
 export default AppLoadAnimation

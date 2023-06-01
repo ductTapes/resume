@@ -1,9 +1,10 @@
 import { Box, styled, css, BoxProps } from '@mui/material'
 import { ContainerProps } from 'src/components/atoms/Container/types'
 import React from 'react'
+import shouldForwardProp from '../../../helpers/shouldForwardProp'
 
 export const Root = styled(Box, {
-  shouldForwardProp: (prop: string) => prop !== 'size',
+  shouldForwardProp: shouldForwardProp('size'),
 })(
   ({ size }: Pick<ContainerProps, 'size'>) => css`
     ${size === 'default' &&
