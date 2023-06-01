@@ -1,19 +1,22 @@
 import Button from 'src/components/atoms/Button'
 import * as S from './styles'
 import Container from 'src/components/atoms/Container'
+import { useAppLoadAnimationContext } from 'src/components/atoms/AppLoadAnimation/AppLoadAnimationContextProvider'
 
 const IntroSection = () => {
+  const [{ isFinished: isFinishedAppLoadAnimation }] = useAppLoadAnimationContext()
+
   return (
     <Container>
-      <S.Root>
+      <S.Root showAnimation={isFinishedAppLoadAnimation}>
         <S.WelcomeContainer>
           <S.Name>
-            <S.NameLine variant="inherit">
+            <S.NameLine delay={1.5} showAnimation={isFinishedAppLoadAnimation} variant="inherit">
               <S.NameText>
                 I’m Grishchenko <S.WhiteLetters>Yura</S.WhiteLetters>
               </S.NameText>
             </S.NameLine>
-            <S.NameLine delay={0.75} variant="inherit">
+            <S.NameLine showAnimation={isFinishedAppLoadAnimation} delay={1.75} variant="inherit">
               <S.NameText>
                 Full-stack deve<S.WhiteLetters>loper</S.WhiteLetters>
               </S.NameText>
@@ -21,7 +24,7 @@ const IntroSection = () => {
           </S.Name>
 
           <S.ButtonContainer>
-            <Button fullWidth>Download cvv</Button>
+            <Button fullWidth>CV</Button>
           </S.ButtonContainer>
         </S.WelcomeContainer>
 

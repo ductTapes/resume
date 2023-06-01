@@ -1,12 +1,21 @@
 import { Box, keyframes, styled, Typography, TypographyProps } from '@mui/material'
 import { css } from '@mui/material/styles'
 
-export const Root = styled(Box)`
-  height: 100vh;
-  padding-top: 6.375rem;
-  display: flex;
-  align-items: center;
-`
+export const Root = styled(Box)<{ showAnimation: boolean }>(
+  ({ showAnimation }) => css`
+    height: 100vh;
+    padding-top: 6.375rem;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s linear 1s;
+
+    ${showAnimation &&
+    css`
+      opacity: 1;
+    `}
+  `,
+)
 
 export const WelcomeContainer = styled(Box)`
   height: 100%;
@@ -27,8 +36,8 @@ export const Name = styled((props: TypographyProps) => <Typography variant="h1" 
 
 export const NameLine = styled((props: TypographyProps) => (
   <Typography component="span" variant="inherit" {...props} />
-))<{ delay?: number }>(
-  ({ theme, delay = 0.5 }) => css`
+))<{ delay?: number; showAnimation: boolean }>(
+  ({ theme, delay = 0.75, showAnimation }) => css`
     position: relative;
     overflow: hidden;
 
@@ -41,13 +50,20 @@ export const NameLine = styled((props: TypographyProps) => (
       width: 100%;
       height: 100%;
       background-color: ${theme.palette.primary.dark};
-      animation: ${HighlightNameKeyframes} 1.3s linear ${delay}s 1 normal forwards;
+
+      ${showAnimation &&
+      css`
+        animation: ${HighlightNameKeyframes} 1.3s linear ${delay}s 1 normal forwards;
+      `}
       transform: translateX(-100%);
       z-index: 1;
     }
 
     ${NameText} {
-      animation: ${OpacityKeyframes} 1.3s linear ${delay}s 1 normal forwards;
+      ${showAnimation &&
+      css`
+        animation: ${OpacityKeyframes} 1.3s linear ${delay}s 1 normal forwards;
+      `}
     }
   `,
 )
