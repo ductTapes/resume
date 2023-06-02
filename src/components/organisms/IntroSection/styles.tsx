@@ -1,6 +1,7 @@
 import { Box, keyframes, styled, Typography, TypographyProps } from '@mui/material'
 import { css } from '@mui/material/styles'
 import shouldForwardProp from '../../../helpers/shouldForwardProp'
+import { forwardRef } from 'react'
 
 export const Root = styled(Box, {
   shouldForwardProp: shouldForwardProp('showAnimation'),
@@ -83,6 +84,23 @@ export const NameText = styled((props: TypographyProps) => (
   `,
 )
 
+export const NameLetter = styled(
+  forwardRef<HTMLSpanElement>((props: TypographyProps, ref) => (
+    <Typography component="span" variant="inherit" {...props} ref={ref} />
+  )),
+)<TypographyProps & { white?: boolean }>(
+  ({ theme, white }) => css`
+    ${white &&
+    css`
+      color: ${theme.palette.text.primary};
+      -webkit-text-fill-color: ${theme.palette.common
+        .white}; /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: ${theme.palette.text.primary};
+    `}
+  `,
+)
+
 export const WhiteLetters = styled((props: TypographyProps) => (
   <Typography component="span" variant="inherit" {...props} />
 ))(
@@ -103,13 +121,19 @@ export const ButtonContainer = styled(Box)`
 `
 
 export const PhotoContainer = styled(Box)`
-  position: relative;
+  position: absolute;
+  left: 42%;
+  max-width: 35rem;
+  width: 45%;
+  min-width: 30rem;
 `
 
 export const Img = styled('img', {
   shouldForwardProp: shouldForwardProp('absolute'),
 })<{ absolute?: boolean }>(
   ({ absolute }) => css`
+    width: 100%;
+
     ${absolute &&
     css`
       position: absolute;

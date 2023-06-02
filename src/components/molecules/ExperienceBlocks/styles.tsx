@@ -39,6 +39,7 @@ export const ImageContainer = styled(Box)`
   width: 100%;
   height: fit-content;
   position: relative;
+  overflow: hidden;
 
   img {
     width: 100%;
