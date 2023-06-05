@@ -68,7 +68,7 @@ export const ListItemLinkArrowContainer = styled((props: TypographyProps) => (
     height: 100%;
   }
 
-  svg:nth-child(2) {
+  svg:nth-of-type(2) {
     position: absolute;
     right: 100%;
     top: 100%;
