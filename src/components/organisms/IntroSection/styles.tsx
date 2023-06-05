@@ -88,6 +88,9 @@ export const NameLetter = styled(
   forwardRef<HTMLSpanElement>((props: TypographyProps, ref) => (
     <Typography component="span" variant="inherit" {...props} ref={ref} />
   )),
+  {
+    shouldForwardProp: shouldForwardProp('white'),
+  },
 )<TypographyProps & { white?: boolean }>(
   ({ theme, white }) => css`
     ${white &&
