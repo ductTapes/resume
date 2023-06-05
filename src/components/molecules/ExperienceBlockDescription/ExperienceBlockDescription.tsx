@@ -32,7 +32,11 @@ export const ExperienceBlockDescription: React.FC<ExperienceBlockDescriptionProp
           <S.ListItemTitle>Link</S.ListItemTitle>
           <S.ListItemLinkValue to={linkHref}>
             {linkText}
-            <SvgIcon component={DiagonalArrowIcon} />
+
+            <S.ListItemLinkArrowContainer>
+              <SvgIcon component={DiagonalArrowIcon} />
+              <SvgIcon component={DiagonalArrowIcon} />
+            </S.ListItemLinkArrowContainer>
           </S.ListItemLinkValue>
         </S.ListItem>
       </Box>
