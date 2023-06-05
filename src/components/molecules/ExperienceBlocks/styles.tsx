@@ -13,6 +13,7 @@ export const Root = styled(ScaleOnScroll)(
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    overflow: hidden;
   `,
 )
 
@@ -39,7 +40,7 @@ export const ImageContainer = styled(Box)`
   width: 100%;
   height: fit-content;
   position: relative;
-  overflow: hidden;
+  margin-top: 7rem;
 
   img {
     width: 100%;

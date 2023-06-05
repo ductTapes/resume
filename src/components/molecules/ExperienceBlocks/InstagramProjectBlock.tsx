@@ -53,8 +53,8 @@ export const InstagramProjectBlock = () => {
           sx={{
             position: 'absolute',
             zIndex: 0,
-            left: '-2rem',
-            bottom: '-4rem',
+            left: '27%',
+            bottom: '-3rem',
             color: alpha(theme.palette.common.green, 0.3),
           }}
         >
