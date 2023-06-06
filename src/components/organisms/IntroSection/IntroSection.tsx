@@ -11,12 +11,10 @@ const NameLetter: React.FC<{ character: string; leftOffsetForChangingColor: numb
   leftOffsetForChangingColor = 0,
 }) => {
   const spanRef = useRef<HTMLSpanElement>(null)
+  const { right = 0, width = 0 } = spanRef.current?.getBoundingClientRect() || {}
 
   return (
-    <S.NameLetter
-      ref={spanRef}
-      white={(spanRef.current?.getBoundingClientRect().right || 0) >= leftOffsetForChangingColor}
-    >
+    <S.NameLetter ref={spanRef} white={right - width * 0.3 >= leftOffsetForChangingColor}>
       {character}
     </S.NameLetter>
   )
@@ -95,7 +93,7 @@ const IntroSection = () => {
 
         <S.PhotoContainer ref={photoContainerRef}>
           <S.Img src="/images/photo.png" alt="Grishchenko Yura" />
-          <S.Img absolute src="/images/photo.png" alt="Grishchenko Yura" />
+          <S.Img absolute src="/images/grid.png" alt="grid background" />
         </S.PhotoContainer>
       </S.Root>
     </Container>
