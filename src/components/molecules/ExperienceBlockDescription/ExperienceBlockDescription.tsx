@@ -30,7 +30,7 @@ export const ExperienceBlockDescription: React.FC<ExperienceBlockDescriptionProp
         </S.ListItem>
         <S.ListItem>
           <S.ListItemTitle>Link</S.ListItemTitle>
-          <S.ListItemLinkValue to={linkHref}>
+          <S.ListItemLinkValue to={linkHref} target="_blank">
             {linkText}
 
             <S.ListItemLinkArrowContainer>

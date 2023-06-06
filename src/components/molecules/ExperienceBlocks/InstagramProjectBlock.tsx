@@ -26,7 +26,7 @@ export const InstagramProjectBlock = () => {
           </Typography>
         }
         linkText="Check out the application"
-        linkHref="/"
+        linkHref="https://devapi.perfectinst.app/swagger"
       />
 
       <S.ImageContainer>
