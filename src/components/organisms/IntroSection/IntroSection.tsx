@@ -82,7 +82,14 @@ const IntroSection = () => {
           </S.Name>
 
           <S.ButtonContainer>
-            <Button fullWidth>CV</Button>
+            <Button
+              onClick={() => {
+                window.open('/documents/Yuriy_Grishchenko_CV.pdf')
+              }}
+              fullWidth
+            >
+              CV
+            </Button>
           </S.ButtonContainer>
         </S.WelcomeContainer>
 
