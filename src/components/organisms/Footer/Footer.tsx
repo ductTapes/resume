@@ -2,7 +2,7 @@ import * as S from './styles'
 
 const Footer = () => {
   return (
-    <S.Root>
+    <S.Root id="contact">
       <S.Block>
         <S.BlockTitle $color="blue">Don’t be shy, say hallo!</S.BlockTitle>
 

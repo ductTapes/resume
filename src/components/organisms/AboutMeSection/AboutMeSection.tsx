@@ -12,7 +12,7 @@ const AboutMeSection = () => {
   const [{ isFinished }] = useAppLoadAnimationContext()
 
   return (
-    <S.Root>
+    <S.Root id="about">
       <Container>
         <Typography>
           I am{' '}

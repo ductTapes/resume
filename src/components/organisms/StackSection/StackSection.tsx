@@ -4,7 +4,7 @@ import Container from 'src/components/atoms/Container'
 
 const StackSection = () => {
   return (
-    <S.Root>
+    <S.Root id="stack">
       <Container>
         <S.CardsContainer>
           <StackCard type="frontend" />
