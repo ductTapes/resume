@@ -1,6 +1,5 @@
 import { GlobalStyles as MUIGlobalStyles } from '@mui/material'
-import { css } from '@mui/material/styles'
-import { Theme } from '@mui/system'
+import { css, Theme } from '@mui/material/styles'
 
 export const GlobalStyles = () => (
   <MUIGlobalStyles
@@ -13,9 +12,9 @@ export const GlobalStyles = () => (
       body {
         line-height: 1;
         font-size: 1rem;
-        // color: ${theme.palette.text.primary};
         font-weight: 400;
         overflow-x: hidden;
+        background-color: ${theme.palette.common.white};
       }
       * {
         box-sizing: border-box;

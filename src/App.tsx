@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Header from 'src/components/organisms/Header/Header'
 import HomePage from 'src/pages/HomePage'
 import Footer from 'src/components/organisms/Footer'
+import CursorFollower from 'src/components/atoms/CursorFollower'
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       </Routes>
 
       <Footer />
+
+      <CursorFollower />
     </div>
   )
 }

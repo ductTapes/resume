@@ -36,11 +36,16 @@ export const BlockTitle = styled(Typography, { shouldForwardProp: shouldForwardP
   `,
 )
 
-export const BlockLink = styled(Link)(
+export const BlockLinkContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${theme.palette.secondary.light};
     padding: 1.5rem;
     flex-grow: 1;
+  `,
+)
+
+export const BlockLink = styled(Link)(
+  () => css`
     font-weight: 700;
     font-size: 2rem;
     line-height: 1.5;

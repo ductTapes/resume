@@ -40,8 +40,40 @@ export const ListItemLinkValue = styled(Link)(
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
+    &:hover {
+      ${ListItemLinkArrowContainer} {
+        svg {
+          transform: translate(100%, -100%);
+        }
+      }
+    }
   `,
-) as typeof Link
+)
+
+export const ListItemLinkArrowContainer = styled((props: TypographyProps) => (
+  <Typography {...props} component="span" />
+))`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 13px;
+  height: 13px;
+
+  svg {
+    transition: transform 0.2s linear;
+    width: 100%;
+    height: 100%;
+  }
+
+  svg:nth-of-type(2) {
+    position: absolute;
+    right: 100%;
+    top: 100%;
+  }
+`
 
 export const DescriptionContainer = styled(Box)(
   ({ theme }) => css`
