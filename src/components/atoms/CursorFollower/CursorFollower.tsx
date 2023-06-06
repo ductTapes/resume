@@ -3,8 +3,8 @@ import * as S from './styles'
 import throttle from 'src/helpers/throttle'
 
 const CursorFollower = () => {
-  const [position, setPosition] = useState<{ left: number; top: number }>({ left: 0, top: 0 })
-  const [show, setShow] = useState<boolean>(false)
+  const [position, setPosition] = useState<{ left: number; top: number }>({ left: -10, top: -10 })
+  const [show, setShow] = useState<boolean>(true)
 
   useEffect(() => {
     const mouseMoveHandler = throttle((e: MouseEvent) => {
