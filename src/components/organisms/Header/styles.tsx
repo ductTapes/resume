@@ -1,7 +1,7 @@
 import { Box, keyframes, styled } from '@mui/material'
 import LinkComponent from 'src/components/atoms/Link'
 import { css } from '@mui/material/styles'
-import shouldForwardProp from '../../../helpers/shouldForwardProp'
+import shouldForwardProp from 'src/helpers/shouldForwardProp'
 
 export const Root = styled('header', {
   shouldForwardProp: shouldForwardProp('isDarkMode', 'isFinishedAppLoadAnimation'),
@@ -17,6 +17,10 @@ export const Root = styled('header', {
     left: 0;
     width: 100%;
     z-index: 10;
+
+    ${theme.breakpoints.down('lg')} {
+      padding: 0 1.75rem;
+    }
 
     ${isFinishedAppLoadAnimation &&
     css`

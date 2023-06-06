@@ -2,7 +2,7 @@ import { Box, BoxProps, styled, Typography } from '@mui/material'
 import { css } from '@mui/material/styles'
 import { Theme } from '@mui/material/styles/createTheme'
 import Link from 'src/components/atoms/Link'
-import shouldForwardProp from '../../../helpers/shouldForwardProp'
+import shouldForwardProp from 'src/helpers/shouldForwardProp'
 
 export const Root = styled(props => <Box component="footer" {...props} />)<BoxProps>`
   background-image: url('/images/grid.png');
@@ -33,6 +33,10 @@ export const BlockTitle = styled(Typography, { shouldForwardProp: shouldForwardP
     border-right: 2px solid ${theme.palette.common.black};
     font-weight: 700;
     color: ${theme.palette.text.primary};
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
   `,
 )
 

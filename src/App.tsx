@@ -4,8 +4,12 @@ import HomePage from 'src/pages/HomePage'
 import Footer from 'src/components/organisms/Footer'
 import CursorFollower from 'src/components/atoms/CursorFollower'
 import { useEffect } from 'react'
+import { useMediaQuery, useTheme } from '@mui/material'
 
 function App() {
+  const theme = useTheme()
+  const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+
   useEffect(() => {
     const hash = window.location.hash
     if (hash) {
@@ -27,7 +31,7 @@ function App() {
 
       <Footer />
 
-      <CursorFollower />
+      {!isTablet && <CursorFollower />}
     </div>
   )
 }

@@ -14,6 +14,11 @@ export const Root = styled(ScaleOnScroll)(
     justify-content: space-between;
     gap: 2rem;
     overflow: hidden;
+
+    ${theme.breakpoints.down('lg')} {
+      padding: 2rem 1rem 3rem;
+      border-radius: 1.75rem;
+    }
   `,
 )
 
@@ -35,18 +40,24 @@ export const LabelIconContainer = styled(Box)`
   animation: 0.5s ease-in-out 0s infinite alternate ${LabelKeyframes};
 `
 
-export const ImageContainer = styled(Box)`
-  max-width: 37%;
-  width: 100%;
-  height: fit-content;
-  position: relative;
-  margin-top: 7rem;
-
-  img {
+export const ImageContainer = styled(Box)(
+  ({ theme }) => css`
+    max-width: 37%;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: fit-content;
     position: relative;
-    max-height: 20rem;
-  }
-`
+    margin-top: 7rem;
+
+    ${theme.breakpoints.down('lg')} {
+      margin-top: 1rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      max-height: 20rem;
+    }
+  `,
+)

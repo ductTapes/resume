@@ -1,6 +1,6 @@
 import { Box, keyframes, styled, Typography, TypographyProps } from '@mui/material'
 import { css } from '@mui/material/styles'
-import shouldForwardProp from '../../../helpers/shouldForwardProp'
+import shouldForwardProp from 'src/helpers/shouldForwardProp'
 import { forwardRef } from 'react'
 
 export const Root = styled(Box, {
@@ -21,16 +21,22 @@ export const Root = styled(Box, {
   `,
 )
 
-export const WelcomeContainer = styled(Box)`
-  height: 100%;
-  display: flex;
-  //align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  transform: translateX(7rem);
-  position: relative;
-  z-index: 1;
-`
+export const WelcomeContainer = styled(Box)(
+  ({ theme }) => css`
+    height: 100%;
+    display: flex;
+    //align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(7rem);
+    position: relative;
+    z-index: 1;
+
+    ${theme.breakpoints.down('lg')} {
+      transform: translateX(2rem);
+    }
+  `,
+)
 
 export const Name = styled((props: TypographyProps) => <Typography variant="h1" {...props} />)`
   display: flex;
