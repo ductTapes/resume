@@ -18,10 +18,10 @@ const Header = () => {
       </S.LogoContainer>
 
       <S.Nav>
-        <S.Link to="/">About</S.Link>
-        <S.Link to="/">Stack</S.Link>
-        <S.Link to="/">Work</S.Link>
-        <S.Link to="/">Contact</S.Link>
+        <S.Link to="#about">About</S.Link>
+        <S.Link to="#stack">Stack</S.Link>
+        <S.Link to="#work">Work</S.Link>
+        <S.Link to="#contact">Contact</S.Link>
       </S.Nav>
     </S.Root>
   )

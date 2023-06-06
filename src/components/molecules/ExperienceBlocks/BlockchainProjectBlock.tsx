@@ -27,7 +27,7 @@ export const BlockchainProjectBlock = () => {
           </Typography>
         }
         linkText="Check out the company’s site"
-        linkHref="/"
+        linkHref="https://collabor.place"
       />
 
       <S.ImageContainer>

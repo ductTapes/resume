@@ -30,7 +30,7 @@ const ExperienceSection = () => {
     return () => window.removeEventListener('scroll', onScrollHandler)
   }, [])
   return (
-    <S.Root ref={rootRef}>
+    <S.Root ref={rootRef} id="work">
       <S.Container size="small">
         <CmsProjectBlock />
         <InstagramProjectBlock />

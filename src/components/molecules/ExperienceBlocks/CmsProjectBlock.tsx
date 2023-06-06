@@ -23,7 +23,7 @@ export const CmsProjectBlock = () => {
           </Typography>
         }
         linkText="Check out the company’s site"
-        linkHref="/"
+        linkHref="https://www.brimit.com"
       />
 
       <S.ImageContainer>
