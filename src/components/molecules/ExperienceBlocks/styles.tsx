@@ -19,6 +19,10 @@ export const Root = styled(ScaleOnScroll)(
       padding: 2rem 1rem 3rem;
       border-radius: 1.75rem;
     }
+
+    ${theme.breakpoints.down('md')} {
+      overflow: visible;
+    }
   `,
 )
 
@@ -32,13 +36,20 @@ const LabelKeyframes = keyframes`
   }
 `
 
-export const LabelIconContainer = styled(Box)`
-  position: absolute;
-  top: 0.2rem;
-  left: 3rem;
-  transform-origin: top left;
-  animation: 0.5s ease-in-out 0s infinite alternate ${LabelKeyframes};
-`
+export const LabelIconContainer = styled(Box)(
+  ({ theme }) => css`
+    position: absolute;
+    top: 0.2rem;
+    left: 3rem;
+    transform-origin: top left;
+    animation: 0.5s ease-in-out 0s infinite alternate ${LabelKeyframes};
+
+    ${theme.breakpoints.down('md')} {
+      top: 0;
+      left: 0;
+    }
+  `,
+)
 
 export const ImageContainer = styled(Box)(
   ({ theme }) => css`
@@ -50,6 +61,10 @@ export const ImageContainer = styled(Box)(
 
     ${theme.breakpoints.down('lg')} {
       margin-top: 1rem;
+    }
+
+    ${theme.breakpoints.down('md')} {
+      display: none;
     }
 
     img {

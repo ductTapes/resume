@@ -122,20 +122,33 @@ export const WhiteLetters = styled((props: TypographyProps) => (
   `,
 )
 
-export const ButtonContainer = styled(Box)`
-  max-width: 14.125rem;
-  width: 100%;
-  margin-top: 1.875rem;
-  margin-left: 15%;
-`
+export const ButtonContainer = styled(Box)(
+  ({ theme }) => css`
+    max-width: 14.125rem;
+    width: 100%;
+    margin-top: 1.875rem;
+    margin-left: 15%;
 
-export const PhotoContainer = styled(Box)`
-  position: absolute;
-  left: 42%;
-  max-width: 35rem;
-  width: 45%;
-  min-width: 30rem;
-`
+    ${theme.breakpoints.down('md')} {
+      margin-left: 0;
+    }
+  `,
+)
+
+export const PhotoContainer = styled(Box)(
+  ({ theme }) => css`
+    position: absolute;
+    left: 42%;
+    max-width: 35rem;
+    width: 45%;
+    min-width: 30rem;
+
+    ${theme.breakpoints.down('md')} {
+      width: 50%;
+      min-width: 12.5rem;
+    }
+  `,
+)
 
 export const Img = styled('img', {
   shouldForwardProp: shouldForwardProp('absolute'),

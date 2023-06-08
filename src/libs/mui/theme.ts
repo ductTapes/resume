@@ -77,4 +77,31 @@ const theme: Theme = createTheme({
   },
 })
 
+const tabletBreakpoint = theme.breakpoints.down('md')
+const mobileBreakpoint = theme.breakpoints.down('sm')
+
+theme.typography.h1 = {
+  ...theme.typography.h1,
+
+  [tabletBreakpoint]: { fontSize: '4rem' },
+
+  [mobileBreakpoint]: { fontSize: '1.875rem' },
+}
+
+theme.typography.h3[mobileBreakpoint] = {
+  fontSize: '1.625rem',
+}
+
+theme.typography.body1[mobileBreakpoint] = {
+  fontSize: '1.625rem',
+}
+
+theme.typography.body2[mobileBreakpoint] = {
+  fontSize: '1rem',
+}
+
+theme.typography.button[mobileBreakpoint] = {
+  fontSize: '0.75rem',
+}
+
 export default theme

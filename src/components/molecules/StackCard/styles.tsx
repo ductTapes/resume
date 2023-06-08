@@ -17,6 +17,7 @@ export const Root = styled(Box, { shouldForwardProp: shouldForwardProp('showMore
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 20rem;
 
     &:hover {
       background-color: ${theme.palette.primary.main};

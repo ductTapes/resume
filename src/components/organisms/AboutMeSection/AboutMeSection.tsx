@@ -16,14 +16,13 @@ const AboutMeSection = () => {
       <Container>
         <Typography>
           I am{' '}
-          <S.HighlightedText ref={highlightedTextRef} isViewed={isFinished && isInViewport}>
-            {' '}
-            a full-stack developer with 3.5 years of{' '}
+          <S.HighlighterContainer ref={highlightedTextRef} isViewed={isFinished && isInViewport}>
             <S.Highlighter preserveAspectRatio="xMinYMid slice" component={HighlighterIcon} />
-          </S.HighlightedText>
-          commercial experience. I worked with projects on various technologies. In my experience I
-          have developed more than 10 projects as a frontend developer and one of my own as a
-          backend developer. Temporarily was a team leader.
+          </S.HighlighterContainer>
+          a full-stack developer with 3.5 years of commercial experience. I worked with projects on
+          various technologies. In my experience I have developed more than 10 projects as a
+          frontend developer and one of my own as a backend developer. Temporarily was a team
+          leader.
         </Typography>
       </Container>
     </S.Root>

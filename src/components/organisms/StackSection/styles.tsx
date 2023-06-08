@@ -9,4 +9,5 @@ export const CardsContainer = styled(Box)`
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  overflow-x: auto;
 `

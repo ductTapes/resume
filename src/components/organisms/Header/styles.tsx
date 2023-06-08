@@ -22,6 +22,10 @@ export const Root = styled('header', {
       padding: 0 1.75rem;
     }
 
+    ${theme.breakpoints.down('md')} {
+      top: 1rem;
+    }
+
     ${isFinishedAppLoadAnimation &&
     css`
       ${LogoContainer} {
@@ -69,18 +73,33 @@ export const Root = styled('header', {
   `,
 )
 
-export const LogoContainer = styled(Box)`
-  opacity: 0;
-  transition: transform 0.3s linear, opacity 0.2s linear 0.5s;
+export const LogoContainer = styled(Box)(
+  ({ theme }) => css`
+    opacity: 0;
+    transition: transform 0.3s linear, opacity 0.2s linear 0.5s;
 
-  &:hover {
-    transform: rotate(360deg);
-  }
+    width: 4rem;
+    height: 4rem;
 
-  svg * {
-    transition: fill 0.2s linear, stroke 0.2s linear;
-  }
-`
+    ${theme.breakpoints.down('md')} {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      * {
+        transition: fill 0.2s linear, stroke 0.2s linear;
+      }
+    }
+  `,
+)
 
 export const Nav = styled('nav')`
   display: flex;
