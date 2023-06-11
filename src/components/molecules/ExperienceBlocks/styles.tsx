@@ -14,6 +14,15 @@ export const Root = styled(ScaleOnScroll)(
     justify-content: space-between;
     gap: 2rem;
     overflow: hidden;
+
+    ${theme.breakpoints.down('lg')} {
+      padding: 2rem 1rem 3rem;
+      border-radius: 1.75rem;
+    }
+
+    ${theme.breakpoints.down('md')} {
+      overflow: visible;
+    }
   `,
 )
 
@@ -27,26 +36,52 @@ const LabelKeyframes = keyframes`
   }
 `
 
-export const LabelIconContainer = styled(Box)`
-  position: absolute;
-  top: 0.2rem;
-  left: 3rem;
-  transform-origin: top left;
-  animation: 0.5s ease-in-out 0s infinite alternate ${LabelKeyframes};
-`
+export const LabelIconContainer = styled(Box)(
+  ({ theme }) => css`
+    position: absolute;
+    top: 0.2rem;
+    left: 3rem;
+    transform-origin: top left;
+    animation: 0.5s ease-in-out 0s infinite alternate ${LabelKeyframes};
 
-export const ImageContainer = styled(Box)`
-  max-width: 37%;
-  width: 100%;
-  height: fit-content;
-  position: relative;
-  margin-top: 7rem;
+    ${theme.breakpoints.down('md')} {
+      top: 0;
+      left: 0;
+    }
 
-  img {
+    ${theme.breakpoints.down('sm')} {
+      top: -2rem;
+      left: -2rem;
+
+      svg {
+        height: 5.6rem;
+      }
+    }
+  `,
+)
+
+export const ImageContainer = styled(Box)(
+  ({ theme }) => css`
+    max-width: 37%;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: fit-content;
     position: relative;
-    max-height: 20rem;
-  }
-`
+    margin-top: 7rem;
+
+    ${theme.breakpoints.down('lg')} {
+      margin-top: 1rem;
+    }
+
+    ${theme.breakpoints.down('md')} {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      max-height: 20rem;
+    }
+  `,
+)

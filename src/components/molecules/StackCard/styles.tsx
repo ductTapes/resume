@@ -17,6 +17,11 @@ export const Root = styled(Box, { shouldForwardProp: shouldForwardProp('showMore
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 16rem;
+
+    ${theme.breakpoints.down('md')} {
+      padding: 2.75rem 1rem;
+    }
 
     &:hover {
       background-color: ${theme.palette.primary.main};
@@ -31,16 +36,22 @@ export const Root = styled(Box, { shouldForwardProp: shouldForwardProp('showMore
   `,
 )
 
-export const IconContainer = styled(Box)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const IconContainer = styled(Box)(
+  ({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  svg {
-    width: auto;
-    height: 10rem;
-  }
-`
+    svg {
+      width: auto;
+      height: 10rem;
+
+      ${theme.breakpoints.down('md')} {
+        height: 6.75rem;
+      }
+    }
+  `,
+)
 
 export const Title = styled(Typography)`
   text-align: center;
@@ -61,6 +72,14 @@ export const Description = styled(Typography)(
     font-size: 1.25rem;
     line-height: 1;
     text-align: center;
+
+    ${theme.breakpoints.down('md')} {
+      font-size: 1rem;
+    }
+
+    ${theme.breakpoints.down('sm')} {
+      padding: 2rem 1rem;
+    }
   `,
 )
 

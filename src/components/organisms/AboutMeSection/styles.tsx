@@ -4,12 +4,18 @@ import { css } from '@mui/material/styles'
 import { forwardRef } from 'react'
 import shouldForwardProp from '../../../helpers/shouldForwardProp'
 
-export const Root = styled(Box)`
-  background-image: url('/images/grid.png');
-  padding: 10.75rem 0 15rem;
-`
+export const Root = styled(Box)(
+  ({ theme }) => css`
+    background-image: url('/images/grid.png');
+    padding: 10.75rem 0 15rem;
 
-export const HighlightedText = styled(
+    ${theme.breakpoints.down('sm')} {
+      padding: 3.875rem 0;
+    }
+  `,
+)
+
+export const HighlighterContainer = styled(
   forwardRef<HTMLSpanElement>((props, ref) => (
     <Typography component="span" variant="inherit" {...props} ref={ref} />
   )),
@@ -19,7 +25,6 @@ export const HighlightedText = styled(
 )<TypographyProps & { isViewed: boolean }>(
   ({ isViewed }) => css`
     position: relative;
-    white-space: nowrap;
 
     & ${Highlighter} {
       ${isViewed &&
@@ -32,13 +37,13 @@ export const HighlightedText = styled(
 
 export const Highlighter = styled(SvgIcon)`
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   width: 0;
   height: 2.5rem;
-  transform: translateY(-50%);
   mix-blend-mode: multiply;
   pointer-events: none;
+  max-width: 508px;
 `
 
 const HighlightAnimation = keyframes`
@@ -47,6 +52,6 @@ const HighlightAnimation = keyframes`
   }
   
   to {
-    width: 100%;
+    width: 70vw
   }
 `

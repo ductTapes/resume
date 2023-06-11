@@ -1,7 +1,7 @@
 import { Box, keyframes, styled } from '@mui/material'
 import LinkComponent from 'src/components/atoms/Link'
 import { css } from '@mui/material/styles'
-import shouldForwardProp from '../../../helpers/shouldForwardProp'
+import shouldForwardProp from 'src/helpers/shouldForwardProp'
 
 export const Root = styled('header', {
   shouldForwardProp: shouldForwardProp('isDarkMode', 'isFinishedAppLoadAnimation'),
@@ -17,6 +17,20 @@ export const Root = styled('header', {
     left: 0;
     width: 100%;
     z-index: 10;
+
+    ${theme.breakpoints.down('lg')} {
+      padding: 0 1.75rem;
+    }
+
+    ${theme.breakpoints.down('md')} {
+      top: 1rem;
+    }
+
+    ${theme.breakpoints.down('sm')} {
+      padding: 0 0.75rem;
+      top: 0;
+      height: 3.875rem;
+    }
 
     ${isFinishedAppLoadAnimation &&
     css`
@@ -65,27 +79,57 @@ export const Root = styled('header', {
   `,
 )
 
-export const LogoContainer = styled(Box)`
-  opacity: 0;
-  transition: transform 0.3s linear, opacity 0.2s linear 0.5s;
+export const LogoContainer = styled(Box)(
+  ({ theme }) => css`
+    opacity: 0;
+    transition: transform 0.3s linear, opacity 0.2s linear 0.5s;
 
-  &:hover {
-    transform: rotate(360deg);
-  }
+    width: 4rem;
+    height: 4rem;
 
-  svg * {
-    transition: fill 0.2s linear, stroke 0.2s linear;
-  }
-`
+    ${theme.breakpoints.down('md')} {
+      width: 3rem;
+      height: 3rem;
+    }
 
-export const Nav = styled('nav')`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  max-width: 23rem;
-  width: 100%;
-`
+    ${theme.breakpoints.down('sm')} {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+
+    a {
+      display: block;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      * {
+        transition: fill 0.2s linear, stroke 0.2s linear;
+      }
+    }
+  `,
+)
+
+export const Nav = styled('nav')(
+  ({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 23rem;
+    width: 100%;
+
+    ${theme.breakpoints.down('sm')} {
+      width: auto;
+    }
+  `,
+)
 
 export const Link = styled(LinkComponent)(
   ({ theme }) => css`
@@ -93,6 +137,10 @@ export const Link = styled(LinkComponent)(
     transition: color 0.2s linear;
     opacity: 0;
     visibility: hidden;
+
+    ${theme.breakpoints.down('sm')} {
+      font-size: 0.75rem;
+    }
 
     &:hover {
       color: ${theme.palette.primary.dark};

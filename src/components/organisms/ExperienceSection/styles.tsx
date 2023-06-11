@@ -5,6 +5,10 @@ export const Root = styled(Box)(
   ({ theme }) => css`
     background-color: ${theme.palette.common.black};
     padding: 3.625rem 0;
+
+    ${theme.breakpoints.down('sm')} {
+      padding: 4rem 0;
+    }
   `,
 )
 

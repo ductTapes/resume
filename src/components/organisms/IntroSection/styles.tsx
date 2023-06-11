@@ -1,18 +1,24 @@
 import { Box, keyframes, styled, Typography, TypographyProps } from '@mui/material'
 import { css } from '@mui/material/styles'
-import shouldForwardProp from '../../../helpers/shouldForwardProp'
+import shouldForwardProp from 'src/helpers/shouldForwardProp'
 import { forwardRef } from 'react'
 
 export const Root = styled(Box, {
   shouldForwardProp: shouldForwardProp('showAnimation'),
 })<{ showAnimation: boolean }>(
-  ({ showAnimation }) => css`
+  ({ theme, showAnimation }) => css`
     height: 100vh;
     padding-top: 6.375rem;
     display: flex;
     align-items: center;
     opacity: 0;
     transition: opacity 0.5s linear 0.6s;
+
+    ${theme.breakpoints.down('sm')} {
+      height: 80vh;
+      padding-top: 0;
+      position: relative;
+    }
 
     ${showAnimation &&
     css`
@@ -21,16 +27,26 @@ export const Root = styled(Box, {
   `,
 )
 
-export const WelcomeContainer = styled(Box)`
-  height: 100%;
-  display: flex;
-  //align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  transform: translateX(7rem);
-  position: relative;
-  z-index: 1;
-`
+export const WelcomeContainer = styled(Box)(
+  ({ theme }) => css`
+    height: 100%;
+    display: flex;
+    //align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(7rem);
+    position: relative;
+    z-index: 1;
+
+    ${theme.breakpoints.down('lg')} {
+      transform: translateX(2rem);
+    }
+
+    ${theme.breakpoints.down('sm')} {
+      transform: translateX(0);
+    }
+  `,
+)
 
 export const Name = styled((props: TypographyProps) => <Typography variant="h1" {...props} />)`
   display: flex;
@@ -116,20 +132,44 @@ export const WhiteLetters = styled((props: TypographyProps) => (
   `,
 )
 
-export const ButtonContainer = styled(Box)`
-  max-width: 14.125rem;
-  width: 100%;
-  margin-top: 1.875rem;
-  margin-left: 15%;
-`
+export const ButtonContainer = styled(Box)(
+  ({ theme }) => css`
+    max-width: 14.125rem;
+    width: 100%;
+    margin-top: 1.875rem;
+    margin-left: 15%;
 
-export const PhotoContainer = styled(Box)`
-  position: absolute;
-  left: 42%;
-  max-width: 35rem;
-  width: 45%;
-  min-width: 30rem;
-`
+    ${theme.breakpoints.down('md')} {
+      margin-left: 0;
+    }
+
+    ${theme.breakpoints.down('sm')} {
+      margin-top: 1rem;
+      max-width: 8rem;
+      margin-left: 0;
+    }
+  `,
+)
+
+export const PhotoContainer = styled(Box)(
+  ({ theme }) => css`
+    position: absolute;
+    left: 42%;
+    max-width: 35rem;
+    width: 45%;
+    min-width: 30rem;
+
+    ${theme.breakpoints.down('md')} {
+      width: 50%;
+      min-width: 12.5rem;
+    }
+
+    ${theme.breakpoints.down('sm')} {
+      left: auto;
+      right: 0;
+    }
+  `,
+)
 
 export const Img = styled('img', {
   shouldForwardProp: shouldForwardProp('absolute'),
@@ -140,9 +180,12 @@ export const Img = styled('img', {
     ${absolute &&
     css`
       position: absolute;
-      top: -2rem;
-      right: -2rem;
+      top: -5%;
+      right: -5%;
       z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     `}
   `,
 )
