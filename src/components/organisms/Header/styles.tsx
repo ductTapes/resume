@@ -26,6 +26,12 @@ export const Root = styled('header', {
       top: 1rem;
     }
 
+    ${theme.breakpoints.down('sm')} {
+      padding: 0 0.75rem;
+      top: 0;
+      height: 3.875rem;
+    }
+
     ${isFinishedAppLoadAnimation &&
     css`
       ${LogoContainer} {
@@ -86,8 +92,17 @@ export const LogoContainer = styled(Box)(
       height: 3rem;
     }
 
+    ${theme.breakpoints.down('sm')} {
+      width: 2rem;
+      height: 2rem;
+    }
+
     &:hover {
       transform: rotate(360deg);
+    }
+
+    a {
+      display: block;
     }
 
     svg {
@@ -101,14 +116,20 @@ export const LogoContainer = styled(Box)(
   `,
 )
 
-export const Nav = styled('nav')`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  max-width: 23rem;
-  width: 100%;
-`
+export const Nav = styled('nav')(
+  ({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 23rem;
+    width: 100%;
+
+    ${theme.breakpoints.down('sm')} {
+      width: auto;
+    }
+  `,
+)
 
 export const Link = styled(LinkComponent)(
   ({ theme }) => css`
@@ -116,6 +137,10 @@ export const Link = styled(LinkComponent)(
     transition: color 0.2s linear;
     opacity: 0;
     visibility: hidden;
+
+    ${theme.breakpoints.down('sm')} {
+      font-size: 0.75rem;
+    }
 
     &:hover {
       color: ${theme.palette.primary.dark};

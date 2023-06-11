@@ -6,13 +6,19 @@ import { forwardRef } from 'react'
 export const Root = styled(Box, {
   shouldForwardProp: shouldForwardProp('showAnimation'),
 })<{ showAnimation: boolean }>(
-  ({ showAnimation }) => css`
+  ({ theme, showAnimation }) => css`
     height: 100vh;
     padding-top: 6.375rem;
     display: flex;
     align-items: center;
     opacity: 0;
     transition: opacity 0.5s linear 0.6s;
+
+    ${theme.breakpoints.down('sm')} {
+      height: 80vh;
+      padding-top: 0;
+      position: relative;
+    }
 
     ${showAnimation &&
     css`
@@ -34,6 +40,10 @@ export const WelcomeContainer = styled(Box)(
 
     ${theme.breakpoints.down('lg')} {
       transform: translateX(2rem);
+    }
+
+    ${theme.breakpoints.down('sm')} {
+      transform: translateX(0);
     }
   `,
 )
@@ -132,6 +142,12 @@ export const ButtonContainer = styled(Box)(
     ${theme.breakpoints.down('md')} {
       margin-left: 0;
     }
+
+    ${theme.breakpoints.down('sm')} {
+      margin-top: 1rem;
+      max-width: 8rem;
+      margin-left: 0;
+    }
   `,
 )
 
@@ -147,6 +163,11 @@ export const PhotoContainer = styled(Box)(
       width: 50%;
       min-width: 12.5rem;
     }
+
+    ${theme.breakpoints.down('sm')} {
+      left: auto;
+      right: 0;
+    }
   `,
 )
 
@@ -159,8 +180,8 @@ export const Img = styled('img', {
     ${absolute &&
     css`
       position: absolute;
-      top: -2rem;
-      right: -2rem;
+      top: -5%;
+      right: -5%;
       z-index: -1;
       width: 100%;
       height: 100%;

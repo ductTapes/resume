@@ -12,6 +12,10 @@ export const Root = styled(props => <Box component="footer" {...props} />)<BoxPr
     ${theme.breakpoints.down('md')} {
       padding: 5rem 0 9rem;
     }
+
+    ${theme.breakpoints.down('sm')} {
+      padding: 4rem 0;
+    }
   `,
 )
 
@@ -21,8 +25,17 @@ export const Block = styled(Box)(
     border-top: 2px solid ${theme.palette.common.black};
     border-bottom: 2px solid ${theme.palette.common.black};
 
+    ${theme.breakpoints.down('sm')} {
+      border: none;
+      flex-direction: column;
+    }
+
     & + & {
       margin-top: 1.5rem;
+
+      ${theme.breakpoints.down('sm')} {
+        margin-top: 2rem;
+      }
     }
   `,
 )
@@ -48,6 +61,14 @@ export const BlockTitle = styled(Typography, { shouldForwardProp: shouldForwardP
       font-size: 1.125rem;
       padding: 1.125rem;
     }
+
+    ${theme.breakpoints.down('sm')} {
+      width: 100%;
+      border: none;
+      padding: 1rem;
+      text-align: center;
+      justify-content: center;
+    }
   `,
 )
 
@@ -59,6 +80,14 @@ export const BlockLinkContainer = styled(Box)(
 
     ${theme.breakpoints.down('md')} {
       padding: 1.125rem;
+    }
+
+    ${theme.breakpoints.down('sm')} {
+      width: 100%;
+      border: none;
+      padding: 1rem;
+      text-align: center;
+      justify-content: center;
     }
   `,
 )

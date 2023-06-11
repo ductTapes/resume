@@ -2,21 +2,34 @@ import { Box, BoxProps, styled, Typography, TypographyProps } from '@mui/materia
 import { css } from '@mui/material/styles'
 import Link from 'src/components/atoms/Link'
 
-export const Root = styled(Box)`
-  font-size: 1.25rem;
-  max-width: 31.25rem;
-  width: 100%;
-  padding-top: 12rem;
-` as typeof Box
+export const Root = styled(Box)(
+  ({ theme }) => css`
+    font-size: 1.25rem;
+    max-width: 31.25rem;
+    width: 100%;
+    padding-top: 12rem;
 
-export const ListItem = styled((props: BoxProps) => <Box component="li" {...props} />)`
-  display: grid;
-  grid-template-columns: 8rem 1fr;
+    ${theme.breakpoints.down('sm')} {
+      padding-top: 2rem;
+      font-size: 1rem;
+    }
+  `,
+)
 
-  & + & {
-    margin-top: 1rem;
-  }
-` as typeof Box
+export const ListItem = styled((props: BoxProps) => <Box component="li" {...props} />)(
+  ({ theme }) => css`
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+
+    ${theme.breakpoints.down('sm')} {
+      grid-template-columns: 4rem 1fr;
+    }
+
+    & + & {
+      margin-top: 1rem;
+    }
+  `,
+)
 
 export const ListItemTitle = styled((props: TypographyProps) => (
   <Typography variant="inherit" {...props} />

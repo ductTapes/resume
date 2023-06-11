@@ -4,10 +4,16 @@ import { css } from '@mui/material/styles'
 import { forwardRef } from 'react'
 import shouldForwardProp from '../../../helpers/shouldForwardProp'
 
-export const Root = styled(Box)`
-  background-image: url('/images/grid.png');
-  padding: 10.75rem 0 15rem;
-`
+export const Root = styled(Box)(
+  ({ theme }) => css`
+    background-image: url('/images/grid.png');
+    padding: 10.75rem 0 15rem;
+
+    ${theme.breakpoints.down('sm')} {
+      padding: 3.875rem 0;
+    }
+  `,
+)
 
 export const HighlighterContainer = styled(
   forwardRef<HTMLSpanElement>((props, ref) => (

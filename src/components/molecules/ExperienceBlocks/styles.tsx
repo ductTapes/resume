@@ -48,6 +48,15 @@ export const LabelIconContainer = styled(Box)(
       top: 0;
       left: 0;
     }
+
+    ${theme.breakpoints.down('sm')} {
+      top: -2rem;
+      left: -2rem;
+
+      svg {
+        height: 5.6rem;
+      }
+    }
   `,
 )
 
