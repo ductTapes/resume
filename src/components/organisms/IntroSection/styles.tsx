@@ -15,7 +15,7 @@ export const Root = styled(Box, {
     transition: opacity 0.5s linear 0.6s;
 
     ${theme.breakpoints.down('sm')} {
-      height: 80vh;
+      //height: 80vh;
       padding-top: 0;
       position: relative;
     }
@@ -145,8 +145,15 @@ export const ButtonContainer = styled(Box)(
 
     ${theme.breakpoints.down('sm')} {
       margin-top: 1rem;
-      max-width: 8rem;
+      max-width: 5rem;
       margin-left: 0;
+    }
+
+    button {
+      ${theme.breakpoints.down('sm')} {
+        padding-top: 0.375rem;
+        padding-bottom: 0.375rem;
+      }
     }
   `,
 )

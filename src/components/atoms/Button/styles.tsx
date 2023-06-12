@@ -8,6 +8,12 @@ export const Button = styled(MUIButton)<ButtonProps>(
       box-shadow: none;
       border-radius: 1.25rem 0;
       transition: background-color 0.2s linear;
+
+      ${theme.breakpoints.down('sm')} {
+        padding-top: 0.375rem;
+        padding-bottom: 0.375rem;
+        border-radius: 0.625rem 0;
+      }
     }
 
     &.MuiButton-containedPrimary {

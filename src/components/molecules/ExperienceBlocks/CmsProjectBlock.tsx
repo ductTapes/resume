@@ -60,7 +60,7 @@ export const CmsProjectBlock = () => {
             Lenguajes: JS, CSS;
           }`}
         </Typography>
-        <img src="/images/brimitLaptop.png" alt="scrump" />
+        <img src="/images/brimitLaptop.png" alt="brimit" />
       </S.ImageContainer>
     </S.Root>
   )
