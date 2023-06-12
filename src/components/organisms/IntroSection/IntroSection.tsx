@@ -92,8 +92,8 @@ const IntroSection = () => {
         </S.WelcomeContainer>
 
         <S.PhotoContainer ref={photoContainerRef}>
-          <S.Img src="/images/photo.png" alt="Grishchenko Yura" />
-          <S.Img absolute src="/images/grid.png" alt="grid background" />
+          <S.Img width={500} height={442} src="/images/photo.webp" alt="Grishchenko Yura" />
+          <S.Img absolute src="/images/grid.webp" alt="grid background" />
         </S.PhotoContainer>
       </S.Root>
     </Container>

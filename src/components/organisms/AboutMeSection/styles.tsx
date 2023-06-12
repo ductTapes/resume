@@ -6,7 +6,7 @@ import shouldForwardProp from '../../../helpers/shouldForwardProp'
 
 export const Root = styled(Box)(
   ({ theme }) => css`
-    background-image: url('/images/grid.png');
+    background-image: url('/images/grid.webp');
     padding: 10.75rem 0 15rem;
 
     ${theme.breakpoints.down('sm')} {

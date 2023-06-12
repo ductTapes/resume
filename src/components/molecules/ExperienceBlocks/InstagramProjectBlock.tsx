@@ -63,7 +63,7 @@ export const InstagramProjectBlock = () => {
               Udemy: CSS Courses;
              }`}
         </Typography>
-        <img src="/images/instagramPhones.png" alt="instagram" />
+        <img src="/images/instagramPhones.webp" alt="instagram" />
       </S.ImageContainer>
     </S.Root>
   )

@@ -9,6 +9,10 @@ export const Root = styled(Box)(
     width: 100%;
     padding-top: 12rem;
 
+    ${theme.breakpoints.down('md')} {
+      max-width: none;
+    }
+
     ${theme.breakpoints.down('sm')} {
       padding-top: 2rem;
       font-size: 1rem;
