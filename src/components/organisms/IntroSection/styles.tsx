@@ -140,13 +140,12 @@ export const ButtonContainer = styled(Box)(
     margin-left: 15%;
 
     ${theme.breakpoints.down('md')} {
-      margin-left: 0;
+      margin-left: 1.3rem;
     }
 
     ${theme.breakpoints.down('sm')} {
       margin-top: 1rem;
       max-width: 5rem;
-      margin-left: 0;
     }
 
     button {

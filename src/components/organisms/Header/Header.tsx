@@ -12,7 +12,12 @@ const Header = () => {
   return (
     <S.Root isDarkMode={isDarkMode} isFinishedAppLoadAnimation={isFinishedAppLoadAnimation}>
       <S.LogoContainer>
-        <Link to="/">
+        <Link
+          to="/"
+          onClick={() => {
+            document.body.scrollIntoView({ behavior: 'smooth' })
+          }}
+        >
           <SvgIcon component={LogoIcon} />
         </Link>
       </S.LogoContainer>
