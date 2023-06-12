@@ -6,7 +6,7 @@ import shouldForwardProp from 'src/helpers/shouldForwardProp'
 
 export const Root = styled(props => <Box component="footer" {...props} />)<BoxProps>(
   ({ theme }) => css`
-    background-image: url('/images/grid.png');
+    background-image: url('/images/grid.webp');
     padding: 9rem 0 15rem;
 
     ${theme.breakpoints.down('md')} {

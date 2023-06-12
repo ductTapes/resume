@@ -183,6 +183,7 @@ export const Img = styled('img', {
 })<{ absolute?: boolean }>(
   ({ absolute }) => css`
     width: 100%;
+    height: auto;
 
     ${absolute &&
     css`

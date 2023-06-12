@@ -85,7 +85,7 @@ export const BlockchainProjectBlock = () => {
           }, time);
           `}
         </Typography>
-        <img src="/images/scrumpLaptop.png" alt="scrump" />
+        <img src="/images/scrumpLaptop.webp" alt="scrump" />
       </S.ImageContainer>
     </S.Root>
   )
