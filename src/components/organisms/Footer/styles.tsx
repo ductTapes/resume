@@ -101,5 +101,13 @@ export const BlockLink = styled(Link)(
     ${theme.breakpoints.down('md')} {
       font-size: 1.125rem;
     }
+
+    &:hover {
+      color: ${theme.palette.primary.dark};
+      -webkit-text-fill-color: ${theme.palette.primary
+        .dark}; /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: ${theme.palette.text.primary};
+    }
   `,
 )
