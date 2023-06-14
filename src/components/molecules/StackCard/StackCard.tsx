@@ -27,7 +27,7 @@ const getStackCardByType: GetStackCardByType = type => {
         icon: NodeJSIcon,
         description: (
           <>
-            I have experience <S.Bold>writing backend on my own projects.</S.Bold> Technologies
+            I have experience in <S.Bold>writing backend on my own projects.</S.Bold> Technologies
             include Typescript, express js, mongoose, jwt, express-validator etc. I describe all the
             documentation through swagger
           </>
