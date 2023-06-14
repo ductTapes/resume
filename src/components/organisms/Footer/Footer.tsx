@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <S.Root id="contact">
       <S.Block>
-        <S.BlockTitle $color="blue">Don’t be shy, say hallo!</S.BlockTitle>
+        <S.BlockTitle $color="blue">Don’t be shy, say hello!</S.BlockTitle>
 
         <S.BlockLinkContainer>
           <S.BlockLink
@@ -30,7 +30,7 @@ const Footer = () => {
       </S.Block>
 
       <S.Block>
-        <S.BlockTitle $color="purple">Let’s connection</S.BlockTitle>
+        <S.BlockTitle $color="purple">Let’s connect</S.BlockTitle>
 
         <S.BlockLinkContainer>
           <S.BlockLink

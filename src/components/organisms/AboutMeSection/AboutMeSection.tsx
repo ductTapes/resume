@@ -19,9 +19,9 @@ const AboutMeSection = () => {
           <S.HighlighterContainer ref={highlightedTextRef} isViewed={isFinished && isInViewport}>
             <S.Highlighter preserveAspectRatio="xMinYMid slice" component={HighlighterIcon} />
           </S.HighlighterContainer>
-          a full-stack developer with 3.5 years of commercial experience. I worked with projects on
-          various technologies. In my experience I have developed more than 10 projects as a
-          frontend developer and one of my own as a backend developer. Temporarily was a team
+          a full-stack developer with 3.5 years of commercial experience. I have worked with
+          projects on various technologies. In my experience I have developed more than 10 projects
+          as a frontend developer and one of my own as a backend developer. Temporarily was a team
           leader.
         </Typography>
       </Container>
