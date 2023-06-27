@@ -6,7 +6,7 @@ export const Root = styled(ScaleOnScroll)(
   ({ theme }) => css`
     width: 100%;
     background-color: ${theme.palette.secondary.main};
-    border-radius: 5rem 1.25rem;
+    border-radius: 5rem 0;
     position: relative;
     padding: 2rem 6.875rem 9.375rem;
     display: flex;
@@ -17,7 +17,7 @@ export const Root = styled(ScaleOnScroll)(
 
     ${theme.breakpoints.down('lg')} {
       padding: 2rem 1rem 3rem;
-      border-radius: 0.625rem 1.875rem;
+      border-radius: 0 1.875rem;
     }
 
     ${theme.breakpoints.down('md')} {
