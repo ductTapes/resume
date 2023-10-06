@@ -23,14 +23,12 @@ function App() {
 
   return (
     <div>
+      1
       <Header />
-
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
-
       <Footer />
-
       {!isTablet && <CursorFollower />}
     </div>
   )
