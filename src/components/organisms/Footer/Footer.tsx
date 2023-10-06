@@ -10,11 +10,11 @@ const Footer = () => {
           <S.BlockLink
             to="#"
             onClick={e => {
-              window.location.href = 'mailto:no-reply@grishchenko-yuriy1996@yandex.by'
+              window.location.href = 'mailto:no-reply@maxim-ivanov@yandex.by'
               e.preventDefault()
             }}
           >
-            grishchenko-yuriy1996@yandex.by
+            maxim-ivanov@yandex.by
           </S.BlockLink>
         </S.BlockLinkContainer>
       </S.Block>
@@ -23,7 +23,7 @@ const Footer = () => {
         <S.BlockTitle $color="green">See more work</S.BlockTitle>
 
         <S.BlockLinkContainer>
-          <S.BlockLink to="https://github.com/ductTapes" target="_blank">
+          <S.BlockLink to="https://github.com/" target="_blank">
             Github
           </S.BlockLink>
         </S.BlockLinkContainer>
@@ -33,10 +33,7 @@ const Footer = () => {
         <S.BlockTitle $color="purple">Let’s connect</S.BlockTitle>
 
         <S.BlockLinkContainer>
-          <S.BlockLink
-            to="https://www.linkedin.com/in/yuriy-grishchenko-0a5151216/"
-            target="_blank"
-          >
+          <S.BlockLink to="https://www.linkedin.com" target="_blank">
             Linkedin
           </S.BlockLink>
         </S.BlockLinkContainer>

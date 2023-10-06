@@ -13,7 +13,7 @@ export const CmsProjectBlock = () => {
       </S.LabelIconContainer>
 
       <ExperienceBlockDescription
-        work="Brimit"
+        work="Epam"
         role="Frontend-developer"
         date="02.08.2020 - Current day"
         description={

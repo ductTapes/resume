@@ -63,10 +63,7 @@ const IntroSection = () => {
           <S.Name>
             <S.NameLine delay={0.7} showAnimation={isFinishedAppLoadAnimation} variant="inherit">
               <S.NameText>
-                <NameText
-                  text="I’m Grishchenko Yura"
-                  leftOffsetForChangingColor={leftPhotoContainer}
-                />
+                <NameText text="I’m Maxim Ivanov" leftOffsetForChangingColor={leftPhotoContainer} />
               </S.NameText>
             </S.NameLine>
             <S.NameLine showAnimation={isFinishedAppLoadAnimation} delay={0.95} variant="inherit">
@@ -82,7 +79,7 @@ const IntroSection = () => {
           <S.ButtonContainer>
             <Button
               onClick={() => {
-                window.open('/documents/Yuriy_Grishchenko_CV.pdf')
+                window.open('/documents/maxim-ivanov.pdf')
               }}
               fullWidth
             >
@@ -92,7 +89,7 @@ const IntroSection = () => {
         </S.WelcomeContainer>
 
         <S.PhotoContainer ref={photoContainerRef}>
-          <S.Img width={500} height={442} src="/images/photo.webp" alt="Grishchenko Yura" />
+          <S.Img width={500} height={442} src="/images/photo.webp" alt="Maxim Ivanov" />
           <S.Img absolute src="/images/grid.webp" alt="grid background" />
         </S.PhotoContainer>
       </S.Root>

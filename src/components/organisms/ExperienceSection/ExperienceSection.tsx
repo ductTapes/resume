@@ -1,9 +1,5 @@
 import * as S from './styles'
-import {
-  BlockchainProjectBlock,
-  CmsProjectBlock,
-  InstagramProjectBlock,
-} from 'src/components/molecules/ExperienceBlocks'
+import { CmsProjectBlock, InstagramProjectBlock } from 'src/components/molecules/ExperienceBlocks'
 import { useEffect, useRef } from 'react'
 import throttle from 'src/helpers/throttle'
 import { useHeaderContext } from 'src/components/organisms/Header/HeaderContextProvider'
@@ -34,7 +30,6 @@ const ExperienceSection = () => {
       <S.Container size="small">
         <CmsProjectBlock />
         <InstagramProjectBlock />
-        <BlockchainProjectBlock />
       </S.Container>
     </S.Root>
   )
